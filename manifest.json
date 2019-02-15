@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "my app",
+    "description": "app to scrape dom",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.jpg"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*/*", "http://*/*"],
+            "js": ["jquery.js", "myscript.js"]
+        }
+    ]
+}
